@@ -5,11 +5,11 @@ const App: React.FC = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path='/selectService' />
-        <Route exact path='/selectServiceExtras' />
-        <Route exact path='/selectAgents' />
-        <Route exact path='/selectDateTime' />
-        <Route exact path='/enterInformation' />
+        <Route exact path='/select-service' />
+        <Route exact path='/select-service-extras' />
+        <Route exact path='/select-agents' />
+        <Route exact path='/select-date-time' />
+        <Route exact path='/enter-information' />
         <Route exact path='/confirmation' />
       </Switch>
     </Router>
