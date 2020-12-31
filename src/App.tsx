@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
+import 'antd/dist/antd.css';
 
 import { GlobalStyle } from './App.styles';
 import { theme } from './utils/theme';
