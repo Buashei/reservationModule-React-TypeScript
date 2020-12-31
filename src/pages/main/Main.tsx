@@ -1,13 +1,17 @@
-import React from 'react';
-import { Layout } from '../../layout/Layout.tsx';
+import React, { useState } from 'react';
 
+import { Modal } from '../../components/Modal/Modal';
 import { Button } from './Main.styles';
 
 const Main: React.FC = () => {
+  const [show, setShow] = useState(false);
+  console.log(show);
+
   return (
-    <Layout>
-      <Button> Reserve a visit </Button>;
-    </Layout>
+    <>
+      <Button onClick={() => setShow(true)}> Reserve a visit </Button>
+      <Modal show={show} onClose={() => setShow(false)} />
+    </>
   );
 };
 
