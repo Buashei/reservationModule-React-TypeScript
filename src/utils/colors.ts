@@ -7,4 +7,5 @@ export const colors = {
   black: '#000000',
   white: '#fff',
   border: 'rgba(0, 0, 0, 0.05)',
+  boxWrapperBorder: '#E5E7EE',
 };

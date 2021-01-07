@@ -20,7 +20,9 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 //Types Import
 import { contentSelectServiceProps } from './ContentSelectService.types';
-import { CustomIcon } from '../../../components/CustomIcon/CustomIcon';
+
+//Component Import
+import { ServiceBox } from '../../../components/ServiceBox/ServiceBox';
 
 export const ContentSelectService: React.FC<contentSelectServiceProps> = props => {
   return (
@@ -32,7 +34,7 @@ export const ContentSelectService: React.FC<contentSelectServiceProps> = props =
         </FontAwesomeWrapper>
       </ContentHeader>
       <ContentContent>
-        <CustomIcon type={'tooth'} />
+        <ServiceBox title='Random Title' />
       </ContentContent>
       <ContentFooterWrapper>
         <ContentFooterButton>
