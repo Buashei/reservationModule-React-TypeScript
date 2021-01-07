@@ -5,4 +5,6 @@ export const colors = {
   secondaryLight: '#8e97b3',
   secondaryLightExtra: 'rgba(142, 151, 179, 0.3)',
   black: '#000000',
+  white: '#fff',
+  border: 'rgba(0, 0, 0, 0.05)',
 };

@@ -5,7 +5,7 @@ export const AsideWrapper = styled.aside`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2vh 3vw 3vh 1vw;
+  padding: 2vh 1.5vw 3vh 1vw;
 `;
 
 export const AsideHeader = styled.div`
@@ -20,12 +20,11 @@ export const AsideFooter = styled.div`
   flex-direction: column;
   align-items: center;
   justify-item: center;
+  text-align: center;
 `;
 
 export const AsideContent = styled.div`
   margin-bottom: 8vh;
-  // border-top: 1px solid #eee;
-  // border-bottom: 1px solid #eee;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,6 +32,10 @@ export const AsideContent = styled.div`
   text-align: center;
 `;
 
-export const DescriptionWrapper = styled.div`
+export const Description = styled.div`
   color: ${({ theme }) => theme.colors.secondaryLight};
+`;
+
+export const DescriptionWrapper = styled.div`
+  margin: 3vh 0 1vh 0;
 `;
