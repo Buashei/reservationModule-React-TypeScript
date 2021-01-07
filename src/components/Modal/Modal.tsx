@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import { ModalWrapper, ModalContent, ModalHeader, ModalBody, ModalFooter } from './Modal.style';
+import { ModalWrapper, ModalContent } from './Modal.style';
 import { ToShowModalProps } from './Modal.types';
+import { SelectService } from '../../pages/selectService/selectService';
 
 export const Modal: React.FC<ToShowModalProps> = props => {
   if (!props.show) {
@@ -20,15 +21,7 @@ export const Modal: React.FC<ToShowModalProps> = props => {
   return (
     <ModalWrapper onClick={props.onClose}>
       <ModalContent onClick={e => e.stopPropagation()}>
-        <ModalHeader>
-          <h4 className='modal-title'>Modal Title</h4>
-        </ModalHeader>
-        <ModalBody>This is modal content</ModalBody>
-        <ModalFooter>
-          <button onClick={props.onClose} className='button'>
-            Close
-          </button>
-        </ModalFooter>
+        <SelectService onClose={props.onClose} />
       </ModalContent>
     </ModalWrapper>
   );

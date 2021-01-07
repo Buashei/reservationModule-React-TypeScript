@@ -1,5 +1,6 @@
 import React from 'react';
 import { CustomIconProps } from './CustomIcon.types';
+import { Img } from './CustomIcon.styles';
 
 //import icon
 import agents from '../../assets/icons/agents.png';
@@ -10,15 +11,15 @@ import services from '../../assets/icons/services.png';
 
 export const CustomIcon: React.FC<CustomIconProps> = props => {
   if (props.type === 'selectService') {
-    return <img src={services}></img>;
+    return <Img src={services} />;
   } else if (props.type === 'selectServiceExtras') {
-    return <img src={service_extras}></img>;
+    return <Img src={service_extras} />;
   } else if (props.type === 'selectAgent') {
-    return <img src={agents}></img>;
+    return <Img src={agents} />;
   } else if (props.type === 'selectDateTime') {
-    return <img src={datepicker}></img>;
+    return <Img src={datepicker} />;
   } else if (props.type === 'enterInformation') {
-    return <img src={contact}></img>;
+    return <Img src={contact} />;
   }
   return null;
 };

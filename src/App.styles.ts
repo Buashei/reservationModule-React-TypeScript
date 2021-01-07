@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { colors } from './utils/colors';
 
 export const GlobalStyle = createGlobalStyle`
   body{
@@ -6,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: 'Ubuntu';
     color: white;
+    background: ${colors.secondary};
   }
   *, *::before, *::after {
     box-sizing: border-box;
