@@ -1,10 +1,10 @@
 import React from 'react';
 
 //component import
-import { CustomIcon } from '../CustomIcon/CustomIcon';
+import { CustomIcon } from '../../CustomIcon/CustomIcon';
 
 //styled import
-import { CustomIconWrapper, BoxWrapper, ServiceTileContainer } from './ServiceBox.styles';
+import { BoxWrapper, ServiceTileContainer, ServiceAmounContainer } from './ServiceBox.styles';
 
 //type import
 import { ServiceBoxProps } from './ServiceBox.types';
@@ -12,10 +12,9 @@ import { ServiceBoxProps } from './ServiceBox.types';
 export const ServiceBox: React.FC<ServiceBoxProps> = props => {
   return (
     <BoxWrapper>
-      <CustomIconWrapper>
-        <CustomIcon type={'tooth'} isSmall />
-      </CustomIconWrapper>
+      <CustomIcon type={props.icon} isSmall />
       <ServiceTileContainer>{props.title}</ServiceTileContainer>
+      <ServiceAmounContainer>{props.serviceAmount} Services</ServiceAmounContainer>
     </BoxWrapper>
   );
 };

@@ -5,6 +5,8 @@ export const ContentWrapper = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  max-height: 70vh;
+  overflow: overlay;
 `;
 
 export const ContentHeader = styled.div`
@@ -16,26 +18,32 @@ export const ContentHeader = styled.div`
 `;
 
 export const ContentContent = styled.div`
-  padding: 5vh;
+  padding: 2.5vh 4vh;
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-top: 0;
   border-bottom: 0;
   height: 100%;
+  margin: auto 0;
+  overflow: overlay;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
 `;
 
 export const ContentFooterWrapper = styled.div`
   padding: 1vh 1vw;
-  position: absolute;
-  bottom: 0;
   border-top: 1px solid ${({ theme }) => theme.colors.border};
   width: 100%;
+  background: ${({ theme }) => theme.colors.white};
+  border-left: 1px solid ${({ theme }) => theme.colors.border};
+  border-radius: 4px;
 `;
 
 export const ContentFooterButton = styled.button`
   margin: 0 0 0 auto;
   display: flex;
   flex-direction: row;
-  width: 7vw;
+  width: 8vw;
   color: ${({ theme }) => theme.colors.white};
   background: ${({ theme }) => theme.colors.main};
   border-radius: 4px;

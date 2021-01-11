@@ -24,12 +24,12 @@ export const AsideFooter = styled.div`
 `;
 
 export const AsideContent = styled.div`
-  margin-bottom: 8vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-item: center;
   text-align: center;
+  margin: auto;
 `;
 
 export const Description = styled.div`
