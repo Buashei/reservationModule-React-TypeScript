@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mediaQueriesMax } from '../../utils/mediaQueries';
 
 export const AsideWrapper = styled.aside`
   width: 20vw;
@@ -6,6 +7,12 @@ export const AsideWrapper = styled.aside`
   flex-direction: column;
   align-items: center;
   padding: 2vh 1.5vw 3vh 1vw;
+  ${mediaQueriesMax('md')`
+  display: none;
+  `};
+  ${mediaQueriesMax('sm')`
+  display: none;
+  `};
 `;
 
 export const AsideHeader = styled.div`

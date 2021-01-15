@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dot } from './Dot';
+import { Dot } from './Dot/Dot';
 
 import { DotStepIndicatorWrapper } from './DotStepIndicator.styles';
 //Lang File

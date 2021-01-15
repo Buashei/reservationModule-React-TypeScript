@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mediaQueriesMin, mediaQueriesMax } from '../../utils/mediaQueries';
 
 export const ModalWrapper = styled.div`
   position: fixed;
@@ -14,11 +15,18 @@ export const ModalWrapper = styled.div`
 `;
 
 export const ModalContent = styled.div`
-  max-height: 80vh;
-  max-width: 70vw;
   background-color: #fff;
   color: black;
   border-radius: 4px;
+  ${mediaQueriesMax('md')`
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  `}
+  ${mediaQueriesMin('md')`
+    max-width: 70vw;
+    max-height: 70vh;
+  `}
 `;
 
 export const ModalHeader = styled.div`

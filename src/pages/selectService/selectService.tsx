@@ -1,8 +1,8 @@
 import React from 'react';
 
 //Component Import
-import { AsideSelectService } from './AsideSelectService/AsideSelectService';
-import { ContentSelectService } from './ContentSelectService/ContentSelectService';
+import { LeftAside } from '../../components/LeftAside/LeftAside';
+import { ContentWithBoxes } from '../../components/ContentWithBoxes/ContentWithBoxes';
 //Styled Import
 import { SelectServiceWrapper } from './selectService.styles';
 //Types Import
@@ -11,8 +11,8 @@ import { selectServiceProps } from './selectService.types';
 export const SelectService: React.FC<selectServiceProps> = props => {
   return (
     <SelectServiceWrapper>
-      <AsideSelectService />
-      <ContentSelectService onClose={props.onClose} />
+      <LeftAside type={'selectService'} />
+      <ContentWithBoxes onClose={props.onClose} />
     </SelectServiceWrapper>
   );
 };

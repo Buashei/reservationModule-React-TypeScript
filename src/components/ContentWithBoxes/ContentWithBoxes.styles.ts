@@ -1,12 +1,19 @@
 import styled from 'styled-components';
+import { mediaQueriesMin, mediaQueriesMax } from '../../utils/mediaQueries';
 
 export const ContentWrapper = styled.div`
-  width: 30vw;
   position: relative;
   display: flex;
   flex-direction: column;
-  max-height: 70vh;
   overflow: overlay;
+  ${mediaQueriesMax('md')`
+  width: 100vw;
+  height: 100vh;
+  `}
+  ${mediaQueriesMin('md')`
+  width: 50vw;
+  max-height: 70vh;
+  `}
 `;
 
 export const ContentHeader = styled.div`
@@ -39,16 +46,29 @@ export const ContentFooterWrapper = styled.div`
   border-radius: 4px;
 `;
 
-export const ContentFooterButton = styled.button`
+export const NextButton = styled.button`
+  ${mediaQueriesMax('lg')`
+    width: 15vw;
+    font-size: 2vw;
+  `}
+  ${mediaQueriesMax('md')`
+    width: 30vw;
+    font-size: 4vw;
+  `}
+  ${mediaQueriesMax('sm')`
+    width: 36vw;
+    font-size: 5vw;
+  `}
   margin: 0 0 0 auto;
   display: flex;
   flex-direction: row;
-  width: 8vw;
   color: ${({ theme }) => theme.colors.white};
   background: ${({ theme }) => theme.colors.main};
   border-radius: 4px;
   border: 1px solid ${({ theme }) => theme.colors.main};
   padding: 1vh;
+  width: 9.5vw;
+  font-size: 1vw;
   &:hover {
     cursor: pointer;
   }
@@ -71,22 +91,7 @@ export const ContentFooterButton = styled.button`
   }
 `;
 
-export const ContentFooterButtonContent = styled.div`
+export const NextButtonContent = styled.div`
   maring-right: 0.5vw;
   display: flex;
-`;
-
-export const ContentFooterButtonIcon = styled.div`
-  ::after {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    content: '\f061';
-    color: 'white';
-    margin-left: 0.2vw;
-  }
-  &:hover {
-    ::after {
-      margin-left: 0.5vw;
-    }
-  }
 `;

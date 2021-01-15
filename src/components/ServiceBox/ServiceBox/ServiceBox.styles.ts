@@ -1,9 +1,17 @@
 import styled from 'styled-components';
+import { mediaQueriesMax } from '../../../utils/mediaQueries';
 
 export const ServiceTileContainer = styled.h3`
   color: ${({ theme }) => theme.colors.black};
   margin: 0 0 0 1vw;
   transition: all 0.5s;
+  ${mediaQueriesMax('md')`
+    font-size: 3vw;
+    width: 40vw;
+  `}
+  ${mediaQueriesMax('sm')`
+    font-size: 3.5vw;
+  `}
 `;
 
 export const BoxWrapper = styled.div`

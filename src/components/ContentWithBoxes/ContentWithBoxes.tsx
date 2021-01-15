@@ -1,7 +1,7 @@
 import React from 'react';
 
 //Lang Import
-import { lang } from '../../../utils/language';
+import { lang } from '../../utils/language';
 
 //Styled Import
 import {
@@ -9,20 +9,20 @@ import {
   ContentHeader,
   ContentContent,
   ContentFooterWrapper,
-  ContentFooterButton,
-  ContentFooterButtonContent,
-} from './ContentSelectService.styles';
-import { FontAwesomeWrapper, H1 } from '../selectService.styles';
+  NextButton,
+  NextButtonContent,
+} from './ContentWithBoxes.styles';
+import { FontAwesomeWrapper, H1 } from '../../pages/selectService/selectService.styles';
 
 //FontAwesome Import
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 //Types Import
-import { contentSelectServiceProps } from './ContentSelectService.types';
+import { contentSelectServiceProps } from './ContentWithBoxes.types';
 
 //Component Import
-import { ServiceBoxesGenerator } from '../../../components/ServiceBox/ServiceBoxesGenerator';
+import { ServiceBoxesGenerator } from '../ServiceBox/ServiceBoxesGenerator';
 
 const ServiceObject = [
   { id: 1, icon: 'tooth', title: 'Genral Dentistry', amount: 3 },
@@ -33,11 +33,15 @@ const ServiceObject = [
   { id: 6, icon: 'weight', title: 'Weight Management', amount: 2 },
   { id: 7, icon: 'psychology', title: 'Psychology Services', amount: 3 },
   { id: 8, icon: 'massage', title: 'Massage and Recovery', amount: 2 },
+  { id: 9, icon: 'tooth', title: 'Genral Dentistry', amount: 3 },
+  { id: 10, icon: 'weight', title: 'Weight Management', amount: 2 },
+  { id: 11, icon: 'psychology', title: 'Psychology Services', amount: 3 },
+  { id: 12, icon: 'massage', title: 'Massage and Recovery', amount: 2 },
 ];
 
-export const ContentSelectService: React.FC<contentSelectServiceProps> = props => {
+export const ContentWithBoxes: React.FC<contentSelectServiceProps> = props => {
   return (
-    <ContentWrapper>
+    <ContentWrapper className='pierożek'>
       <ContentHeader>
         <H1>{lang.eng.selectService}</H1>
         <FontAwesomeWrapper onClick={props.onClose}>
@@ -48,9 +52,9 @@ export const ContentSelectService: React.FC<contentSelectServiceProps> = props =
         <ServiceBoxesGenerator data={ServiceObject} />
       </ContentContent>
       <ContentFooterWrapper>
-        <ContentFooterButton>
-          <ContentFooterButtonContent />
-        </ContentFooterButton>
+        <NextButton>
+          <NextButtonContent />
+        </NextButton>
       </ContentFooterWrapper>
     </ContentWrapper>
   );

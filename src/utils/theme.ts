@@ -7,4 +7,9 @@ export const theme = {
     regular: 400,
     bold: 800,
   },
+  breakpoints: {
+    mobile: { value: 450 },
+    tablet: { value: 700 },
+    desktop: { value: 900 },
+  },
 };

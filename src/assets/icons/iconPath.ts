@@ -8,15 +8,17 @@ import tooth from './tooth.png';
 import weight from './weight.png';
 import psychology from './psychology.png';
 import massage from './massage.png';
+import confirmation from './confirmation.png';
 
 import { IconPathProps } from './iconPath.types';
 
 const iconPath: IconPathProps = {
-  agents: agents,
-  contact: contact,
-  datepicker: datepicker,
-  service_extras: service_extras,
   selectService: selectService,
+  selectServiceExtras: service_extras,
+  selectAgent: agents,
+  selectDateTime: datepicker,
+  enterInformation: contact,
+  confirmation: confirmation,
   tooth: tooth,
   weight: weight,
   psychology: psychology,
