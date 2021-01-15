@@ -6,7 +6,7 @@ export const AsideWrapper = styled.aside`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2vh 1.5vw 3vh 1vw;
+  padding: 0 1.5vw 3vh 1vw;
   ${mediaQueriesMax('md')`
   display: none;
   `};
@@ -18,8 +18,7 @@ export const AsideWrapper = styled.aside`
 export const AsideHeader = styled.div`
   display: flex;
   align-items: center;
-  justify-item: center;
-  padding-bottom: 8vh;
+  height: 10vh;
 `;
 
 export const AsideFooter = styled.div`

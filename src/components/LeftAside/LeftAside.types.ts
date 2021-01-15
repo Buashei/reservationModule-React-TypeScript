@@ -8,5 +8,9 @@ export interface Types {
 }
 
 export type LeftAsideProps = {
-  type: string;
+  type: Keys;
 };
+
+// export interface ObjectTypes {
+//   [key: string]: any;
+// }

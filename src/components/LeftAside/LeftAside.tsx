@@ -50,24 +50,23 @@ const leftAsideObject: Record<Keys, Types> = {
   },
 };
 
-export const LeftAside: React.FC<LeftAsideProps> = props => {
-  const key = props.type;
+export const LeftAside: React.FC<LeftAsideProps> = ({ type }) => {
   return (
     <AsideWrapper>
       <AsideHeader>
         <DotStepIndicator />
       </AsideHeader>
       <AsideContent>
-        <CustomIcon type={'selectService'} />
+        <CustomIcon type={type} />
         <DescriptionWrapper>
-          <H1>{leftAsideObject[key].mainHeader}</H1>
-          <Description>{lang.eng.selectServiceDesc}</Description>
+          <H1>{leftAsideObject[type].mainHeader}</H1>
+          <Description>{leftAsideObject[type].mainDescription}</Description>
         </DescriptionWrapper>
       </AsideContent>
       <AsideFooter>
         <DescriptionWrapper>
-          <H3>{lang.eng.questions}</H3>
-          <Description>{lang.eng.callForHelp}</Description>
+          <H3>{leftAsideObject[type].secondHeader}</H3>
+          <Description>{leftAsideObject[type].secondDescription}</Description>
         </DescriptionWrapper>
       </AsideFooter>
     </AsideWrapper>

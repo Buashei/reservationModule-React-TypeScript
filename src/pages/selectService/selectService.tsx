@@ -11,7 +11,7 @@ import { selectServiceProps } from './selectService.types';
 export const SelectService: React.FC<selectServiceProps> = props => {
   return (
     <SelectServiceWrapper>
-      <LeftAside type={'selectService'} />
+      <LeftAside type={'confirmation'} />
       <ContentWithBoxes onClose={props.onClose} />
     </SelectServiceWrapper>
   );

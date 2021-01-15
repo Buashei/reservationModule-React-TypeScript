@@ -18,6 +18,7 @@ export const ContentWrapper = styled.div`
 
 export const ContentHeader = styled.div`
   padding: 1vh 2vw 1vh 1vw;
+  height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
