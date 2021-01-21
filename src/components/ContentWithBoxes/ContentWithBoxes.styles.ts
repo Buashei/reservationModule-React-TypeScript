@@ -68,7 +68,7 @@ export const NextButton = styled.button`
   border-radius: 4px;
   border: 1px solid ${({ theme }) => theme.colors.main};
   padding: 1vh;
-  width: 9.5vw;
+  width: 8vw;
   font-size: 1vw;
   &:hover {
     cursor: pointer;

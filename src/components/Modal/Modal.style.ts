@@ -7,11 +7,10 @@ export const ModalWrapper = styled.div`
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 20px 50px rgba(0, 0, 0, 0.4);
 `;
 
 export const ModalContent = styled.div`
@@ -26,6 +25,7 @@ export const ModalContent = styled.div`
   ${mediaQueriesMin('md')`
     max-width: 70vw;
     max-height: 70vh;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   `}
 `;
 
