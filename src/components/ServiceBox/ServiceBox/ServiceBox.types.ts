@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export type ServiceBoxProps = {
   title: string;
   serviceAmount: number;
