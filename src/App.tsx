@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import React, { createContext, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import 'antd/dist/antd.css';
@@ -9,23 +9,7 @@ import { Layout } from './layout/Layout';
 
 import Main from './pages/main/Main';
 
-export type ServiceContextType = {
-  data: Data[];
-};
-export interface Data {
-  id: number;
-  icon: string;
-  title: string;
-  amount: number;
-  services: {
-    id: number;
-    icon: string;
-    title: string;
-    description: string;
-    price: number;
-    durationPrices?: number[];
-  }[];
-}
+import { ServiceContextType } from './App.types';
 
 const serviceObject: ServiceContextType = {
   data: [
@@ -38,6 +22,9 @@ const serviceObject: ServiceContextType = {
         { id: 1, icon: 'service3', title: 'Root Canal', description: 'Slowly he whom important. Only we height', price: 20 },
         { id: 2, icon: 'service1', title: 'Invisilign Braces', description: 'Slowly he whom important. Only we height', price: 30 },
         { id: 3, icon: 'service2', title: 'Teeth Whitening', description: 'Slowly he whom important. Only we height', price: 50 },
+        { id: 4, icon: 'service2', title: 'Teeth Whitening', description: 'Slowly he whom important. Only we height', price: 50 },
+        { id: 5, icon: 'service2', title: 'Teeth Whitening', description: 'Slowly he whom important. Only we height', price: 50 },
+        { id: 6, icon: 'service2', title: 'Teeth Whitening', description: 'Slowly he whom important. Only we height', price: 50 },
       ],
     },
     {
@@ -122,8 +109,14 @@ const serviceObject: ServiceContextType = {
     },
   ],
 };
+export interface FormDataType {
+  formData: { title: string };
+  setFormData: React.Dispatch<React.SetStateAction<{ title: string }>>;
+}
 
 export const ServiceContext = createContext<ServiceContextType>(serviceObject);
+const [formData, setFormData] = useState({ title: '' });
+export const FormData = createContext<FormDataType>({ formData, setFormData });
 
 const App: React.FC = () => {
   return (
@@ -137,12 +130,14 @@ const App: React.FC = () => {
                 <Route exact path='/' component={Main} />
               </Layout>
               <ServiceContext.Provider value={serviceObject}>
-                <Route exact path='/select-service' />
-                <Route exact path='/select-service-extras' />
-                <Route exact path='/select-agents' />
-                <Route exact path='/select-date-time' />
-                <Route exact path='/enter-information' />
-                <Route exact path='/confirmation' />
+                <FormData.Provider value={{ formData, setFormData }}>
+                  <Route exact path='/select-service' />
+                  <Route exact path='/select-service-extras' />
+                  <Route exact path='/select-agents' />
+                  <Route exact path='/select-date-time' />
+                  <Route exact path='/enter-information' />
+                  <Route exact path='/confirmation' />
+                </FormData.Provider>
               </ServiceContext.Provider>
             </>
           </ThemeProvider>

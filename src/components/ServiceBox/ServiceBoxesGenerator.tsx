@@ -8,7 +8,6 @@ import { ServiceBoxGeneratorProps } from './ServiceBoxGenerator.types';
 import { ServiceContext } from '../../App';
 
 export const ServiceBoxesGenerator: React.FC<ServiceBoxGeneratorProps> = props => {
-  // const dataArray = props.data;
   const { data } = useContext(ServiceContext);
   const dataArray = data;
   console.log(props.formData);
