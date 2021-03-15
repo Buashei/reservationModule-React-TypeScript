@@ -13,7 +13,7 @@ export const SelectService: React.FC<selectServiceProps> = props => {
   return (
     <SelectServiceWrapper>
       <LeftAside type={'selectService'} />
-      <ContentWithBoxes onClose={props.onClose} formData={props.formData} setFormData={props.setFormData} />
+      <ContentWithBoxes onClose={props.onClose} />
       <RightAside />
     </SelectServiceWrapper>
   );

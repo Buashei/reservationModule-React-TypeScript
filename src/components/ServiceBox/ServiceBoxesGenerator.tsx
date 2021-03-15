@@ -3,16 +3,16 @@ import React, { useContext } from 'react';
 //Component Import
 import { ServiceBox } from './ServiceBox/ServiceBox';
 import { ProcedureBox } from './ProcedureBox/ProcedureBox';
-//Type Import
-import { ServiceBoxGeneratorProps } from './ServiceBoxGenerator.types';
+//Context Import
 import { ServiceContext } from '../../App';
+import { FormContext } from '../../utils/formContext';
 
-export const ServiceBoxesGenerator: React.FC<ServiceBoxGeneratorProps> = props => {
+export const ServiceBoxesGenerator: React.FC = () => {
   const { data } = useContext(ServiceContext);
   const dataArray = data;
-  console.log(props.formData);
-  if (props.formData.title) {
-    const searchedObject = dataArray.find(x => x.title === props.formData.title);
+  const [formData, setFormData] = useContext(FormContext);
+  if (formData.title) {
+    const searchedObject = dataArray.find(x => x.title === formData.title);
     const procedureObject = searchedObject?.services;
     return (
       <>
@@ -29,7 +29,7 @@ export const ServiceBoxesGenerator: React.FC<ServiceBoxGeneratorProps> = props =
           <div
             key={data.id}
             onClick={() => {
-              props.setFormData({ title: data.title });
+              setFormData({ title: data.title });
             }}
           >
             <ServiceBox key={data.id} icon={data.icon} title={data.title} serviceAmount={data.amount} />

@@ -34,7 +34,7 @@ export const ContentWithBoxes: React.FC<contentSelectServiceProps> = props => {
         </FontAwesomeWrapper>
       </ContentHeader>
       <ContentContent className='contentWrapper'>
-        <ServiceBoxesGenerator formData={props.formData} setFormData={props.setFormData} />
+        <ServiceBoxesGenerator />
       </ContentContent>
       <ContentFooterWrapper>
         <NextButton>

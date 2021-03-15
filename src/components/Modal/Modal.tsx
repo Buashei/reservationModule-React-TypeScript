@@ -21,7 +21,7 @@ export const Modal: React.FC<ToShowModalProps> = props => {
   return (
     <ModalWrapper onClick={props.onClose}>
       <ModalContent onClick={e => e.stopPropagation()}>
-        <SelectService onClose={props.onClose} type={'selectService'} formData={props.formData} setFormData={props.setFormData} />
+        <SelectService onClose={props.onClose} type={'selectService'} />
       </ModalContent>
     </ModalWrapper>
   );

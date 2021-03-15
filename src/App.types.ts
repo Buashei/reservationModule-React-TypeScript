@@ -1,3 +1,5 @@
+import React, { Dispatch, SetStateAction } from 'react';
+
 export type ServiceContextType = {
   data: Data[];
 };

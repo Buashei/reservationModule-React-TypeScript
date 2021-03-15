@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import 'antd/dist/antd.css';
@@ -109,14 +109,8 @@ const serviceObject: ServiceContextType = {
     },
   ],
 };
-export interface FormDataType {
-  formData: { title: string };
-  setFormData: React.Dispatch<React.SetStateAction<{ title: string }>>;
-}
 
 export const ServiceContext = createContext<ServiceContextType>(serviceObject);
-const [formData, setFormData] = useState({ title: '' });
-export const FormData = createContext<FormDataType>({ formData, setFormData });
 
 const App: React.FC = () => {
   return (
@@ -130,14 +124,12 @@ const App: React.FC = () => {
                 <Route exact path='/' component={Main} />
               </Layout>
               <ServiceContext.Provider value={serviceObject}>
-                <FormData.Provider value={{ formData, setFormData }}>
-                  <Route exact path='/select-service' />
-                  <Route exact path='/select-service-extras' />
-                  <Route exact path='/select-agents' />
-                  <Route exact path='/select-date-time' />
-                  <Route exact path='/enter-information' />
-                  <Route exact path='/confirmation' />
-                </FormData.Provider>
+                <Route exact path='/select-service' />
+                <Route exact path='/select-service-extras' />
+                <Route exact path='/select-agents' />
+                <Route exact path='/select-date-time' />
+                <Route exact path='/enter-information' />
+                <Route exact path='/confirmation' />
               </ServiceContext.Provider>
             </>
           </ThemeProvider>
