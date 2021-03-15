@@ -24,6 +24,8 @@ import { contentSelectServiceProps } from './ContentWithBoxes.types';
 //Component Import
 import { ServiceBoxesGenerator } from '../ServiceBox/ServiceBoxesGenerator';
 
+import { FormProvider } from '../../utils/formContext';
+
 export const ContentWithBoxes: React.FC<contentSelectServiceProps> = props => {
   return (
     <ContentWrapper className='pierożek'>
@@ -34,7 +36,9 @@ export const ContentWithBoxes: React.FC<contentSelectServiceProps> = props => {
         </FontAwesomeWrapper>
       </ContentHeader>
       <ContentContent className='contentWrapper'>
-        <ServiceBoxesGenerator />
+        <FormProvider>
+          <ServiceBoxesGenerator />
+        </FormProvider>
       </ContentContent>
       <ContentFooterWrapper>
         <NextButton>
